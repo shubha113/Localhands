@@ -66,14 +66,10 @@ app.use(express.urlencoded({extended: true, limit: "10mb"}));
 // Compression
 app.use(compression());// use to compress the data server is sending
 
-//Health check
-app.get('/api/v1/health', (req, res) => {
-    res.status(200).json({
-        success: true,
-        message: 'LocalReviews API is running!',
-        timestamp: new Date().toISOString()
-    });
+app.get("/", (req, res) => {
+  res.send("API is running");
 });
+
 
 //Routes
 app.use('/api/v1/users', userRoutes);
