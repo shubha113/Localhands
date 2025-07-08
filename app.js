@@ -43,7 +43,7 @@ app.use(helmet());
 
 //cors
 app.use(cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: process.env.CLIENT_URL || 'https://localhands-frontend.vercel.app',
     credentials: true,
     optionsSuccessStatus: 200
 }));
